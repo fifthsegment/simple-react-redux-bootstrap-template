@@ -3,12 +3,13 @@ import { connect } from "react-redux"
 
 import { doSomething } from "../actions/primaryActions"
 
+// Transfer store data to props for this class
 @connect((store) => {
   return {
     primaryData: store.primaryData,
   };
 })
-export default class Layout extends React.Component {
+export default class Main extends React.Component {
   componentWillMount() {
     this.props.dispatch(doSomething())
   }
